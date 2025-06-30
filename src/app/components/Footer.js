@@ -1,32 +1,32 @@
-import { Twitter, Linkedin, Github, FileText, Mail, CodeXml } from "lucide-react";
+import { Twitter, Linkedin, Github, FileText, Mail, Camera } from "lucide-react";
 
 export default function Footer({ className }) {
   const links = [
     {
-      name: "x",
-      href: "https://x.com/_martinsit",
-      icon: Twitter,
-    },
-    {
-      name: "linkedin",
-      href: "https://www.linkedin.com/in/martin-sit/",
-      icon: Linkedin,
-    },
-    {
       name: "github",
-      href: "https://github.com/martin226",
+      href: "https://github.com/cameronbyrne4",
       icon: Github,
     },
     {
+      name: "linkedin",
+      href: "https://www.linkedin.com/in/cameronbyrne00/",
+      icon: Linkedin,
+    },
+    {
+      name: "twitter",
+      href: "https://x.com/cambyrnetech",
+      icon: Twitter,
+    },
+    {
       name: "email",
-      href: "mailto:martinsit288@gmail.com",
+      href: "mailto:cameron.byrne@outlook.com",
       icon: Mail,
     },
     {
-      name: "repo",
-      href: "https://github.com/martin226/v2",
-      icon: CodeXml,
-    }
+      name: "instagram",
+      href: "https://instagram.com/cambybyrne",
+      icon: Camera,
+    },
   ];
 
   return (
@@ -56,26 +56,8 @@ export default function Footer({ className }) {
             </a>
           ))}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <a href="https://cs.uwatering.com/#https://martinsit.ca/?nav=prev" className="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200">
-            ←
-          </a>
-          <a
-            href="https://cs.uwatering.com/#https://martinsit.ca/"
-            target="_blank"
-          >
-            <img
-              src="https://cs.uwatering.com/icon.black.svg"
-              alt="CS Webring"
-              className="w-6 h-auto opacity-80 dark:invert"
-            />
-          </a>
-          <a href="https://cs.uwatering.com/#https://martinsit.ca/?nav=next" className="text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200">
-            →
-          </a>
-        </div>
       </div>
-      <p>{new Date().getFullYear()} &copy; Martin Sit</p>
+      <p>{new Date().getFullYear()} &copy; Cameron Byrne</p>
     </footer>
   );
 }

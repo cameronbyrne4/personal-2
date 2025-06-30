@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Command } from "cmdk";
 import { useRouter, usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Search, FileText, Home, FolderGit2, PenLine, Github, Linkedin, ExternalLink, Twitter, Mail, CodeXml, Lightbulb, Sun, Moon } from "lucide-react";
+import { Search, FileText, Home, FolderGit2, PenLine, Github, Linkedin, ExternalLink, Twitter, Mail, CodeXml, Lightbulb, Sun, Moon, Camera } from "lucide-react";
 import useMobileDevice from "../hooks/useMobileDevice";
 import { useTheme } from "./ThemeProvider";
 
@@ -158,24 +158,24 @@ export default function CommandPalette() {
       } else if (key === "w") {
         e.preventDefault();
         runCommand(() => router.push("/writing"));
-      } else if (key === "x") {
-        e.preventDefault();
-        runCommand(() => window.open("https://x.com/_martinsit", "_blank"));
-      } else if (key === "l") {
-        e.preventDefault();
-        runCommand(() => window.open("https://www.linkedin.com/in/martin-sit/", "_blank"));
       } else if (key === "g") {
         e.preventDefault();
-        runCommand(() => window.open("https://github.com/martin226", "_blank"));
+        runCommand(() => window.open("https://github.com/cameronbyrne4", "_blank"));
+      } else if (key === "l") {
+        e.preventDefault();
+        runCommand(() => window.open("https://www.linkedin.com/in/cameronbyrne00/", "_blank"));
+      } else if (key === "x") {
+        e.preventDefault();
+        runCommand(() => window.open("https://x.com/cambyrnetech", "_blank"));
+      } else if (key === "i") {
+        e.preventDefault();
+        runCommand(() => window.open("https://instagram.com/cambybyrne", "_blank"));
+      } else if (key === "e") {
+        e.preventDefault();
+        runCommand(() => window.open("mailto:cameron.byrne@outlook.com", "_blank"));
       } else if (key === "r") {
         e.preventDefault();
         runCommand(() => window.open("/resume.pdf", "_blank"));
-      } else if (key === "e") {
-        e.preventDefault();
-        runCommand(() => window.open("mailto:martinsit288@gmail.com", "_blank"));
-      } else if (key === "c") {
-        e.preventDefault();
-        runCommand(() => window.open("https://github.com/martin226/v2", "_blank"));
       } else if (key === "t") {
         e.preventDefault();
         runCommand(() => toggleTheme());
@@ -205,6 +205,41 @@ export default function CommandPalette() {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open, router, pathname]);
+
+  // Global key commands for socials and actions
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      // Only handle shift + key combinations, and ignore if focused on input/textarea
+      if (!e.shiftKey) return;
+      const tag = document.activeElement.tagName.toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || document.activeElement.isContentEditable) return;
+      const key = e.key.toLowerCase();
+      if (key === "g") {
+        e.preventDefault();
+        window.open("https://github.com/cameronbyrne4", "_blank");
+      } else if (key === "l") {
+        e.preventDefault();
+        window.open("https://www.linkedin.com/in/cameronbyrne00/", "_blank");
+      } else if (key === "x") {
+        e.preventDefault();
+        window.open("https://x.com/cambyrnetech", "_blank");
+      } else if (key === "i") {
+        e.preventDefault();
+        window.open("https://instagram.com/cambybyrne", "_blank");
+      } else if (key === "e") {
+        e.preventDefault();
+        window.open("mailto:cameron.byrne@outlook.com", "_blank");
+      } else if (key === "r") {
+        e.preventDefault();
+        window.open("/resume.pdf", "_blank");
+      } else if (key === "t") {
+        e.preventDefault();
+        toggleTheme();
+      }
+    };
+    document.addEventListener("keydown", handleGlobalKeyDown);
+    return () => document.removeEventListener("keydown", handleGlobalKeyDown);
+  }, [toggleTheme]);
 
   const runCommand = (command) => {
     setOpen(false);
@@ -348,17 +383,17 @@ export default function CommandPalette() {
 
               <Command.Group heading="Links" className="px-2 text-stone-500 dark:text-stone-400">
                 <Command.Item
-                  value="twitter"
-                  onSelect={() => runCommand(() => window.open("https://x.com/_martinsit", "_blank"))}
+                  value="github"
+                  onSelect={() => runCommand(() => window.open("https://github.com/cameronbyrne4", "_blank"))}
                   className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
                 >
-                  <Twitter className="h-4 w-4" />
-                  <span className="flex-1">X Profile</span>
-                  <Shortcut>X</Shortcut>
+                  <Github className="h-4 w-4" />
+                  <span className="flex-1">GitHub Profile</span>
+                  <Shortcut>G</Shortcut>
                 </Command.Item>
                 <Command.Item
                   value="linkedin"
-                  onSelect={() => runCommand(() => window.open("https://www.linkedin.com/in/martin-sit/", "_blank"))}
+                  onSelect={() => runCommand(() => window.open("https://www.linkedin.com/in/cameronbyrne00/", "_blank"))}
                   className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
                 >
                   <Linkedin className="h-4 w-4" />
@@ -366,13 +401,31 @@ export default function CommandPalette() {
                   <Shortcut>L</Shortcut>
                 </Command.Item>
                 <Command.Item
-                  value="github"
-                  onSelect={() => runCommand(() => window.open("https://github.com/martin226", "_blank"))}
+                  value="twitter"
+                  onSelect={() => runCommand(() => window.open("https://x.com/cambyrnetech", "_blank"))}
                   className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
                 >
-                  <Github className="h-4 w-4" />
-                  <span className="flex-1">GitHub Profile</span>
-                  <Shortcut>G</Shortcut>
+                  <Twitter className="h-4 w-4" />
+                  <span className="flex-1">Twitter/X Profile</span>
+                  <Shortcut>X</Shortcut>
+                </Command.Item>
+                <Command.Item
+                  value="instagram"
+                  onSelect={() => runCommand(() => window.open("https://instagram.com/cambybyrne", "_blank"))}
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
+                >
+                  <Camera className="h-4 w-4" />
+                  <span className="flex-1">Instagram</span>
+                  <Shortcut>I</Shortcut>
+                </Command.Item>
+                <Command.Item
+                  value="email"
+                  onSelect={() => runCommand(() => window.open("mailto:cameron.byrne@outlook.com", "_blank"))}
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
+                >
+                  <Mail className="h-4 w-4" />
+                  <span className="flex-1">Email</span>
+                  <Shortcut>E</Shortcut>
                 </Command.Item>
                 <Command.Item
                   value="resume"
@@ -382,24 +435,6 @@ export default function CommandPalette() {
                   <FileText className="h-4 w-4" />
                   <span className="flex-1">Resume</span>
                   <Shortcut>R</Shortcut>
-                </Command.Item>
-                <Command.Item
-                  value="email"
-                  onSelect={() => runCommand(() => window.open("mailto:martinsit288@gmail.com", "_blank"))}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span className="flex-1">Email</span>
-                  <Shortcut>E</Shortcut>
-                </Command.Item>
-                <Command.Item
-                  value="source"
-                  onSelect={() => runCommand(() => window.open("https://github.com/martin226/v2", "_blank"))}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-stone-600 dark:text-stone-400 rounded hover:bg-stone-100 dark:hover:bg-stone-800 cursor-pointer data-[selected=true]:bg-stone-100 dark:data-[selected=true]:bg-stone-800"
-                >
-                  <CodeXml className="h-4 w-4" />
-                  <span className="flex-1">Website Repository</span>
-                  <Shortcut>C</Shortcut>
                 </Command.Item>
               </Command.Group>
 

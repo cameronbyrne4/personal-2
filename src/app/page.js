@@ -3,7 +3,6 @@
 import Link from "./components/Link";
 import NextLink from "next/link";
 import Headshot from "@/app/assets/headshot.png";
-import Signature from "@/app/components/Signature";
 import ShopifyLogo from "@/app/components/icon/Shopify.png";
 import UWaterlooLogo from "@/app/components/icon/UWaterloo.png";
 import SunnybrookLogo from "@/app/components/icon/Sunnybrook.png";
@@ -94,10 +93,7 @@ export default function About() {
         </Link>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-4">
-        <div className="relative flex-1 flex items-center">
-          <Signature />
-        </div>
+      <div className="flex justify-center mt-8">
         <div className="w-48 h-48 relative rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg overflow-hidden bg-stone-50 dark:bg-stone-800">
           <Image
             src={Headshot}
