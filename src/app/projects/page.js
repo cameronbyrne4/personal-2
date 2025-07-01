@@ -2,24 +2,10 @@
 
 import Link from "../components/Link";
 import ProjectList from "../components/ProjectList";
-
-import VibeDrawImage from "../assets/projects/vibedraw.gif";
-import SlideItInImage from "../assets/projects/slideitin.png";
-import MakeItJakesImage from "../assets/projects/makeitjakes.gif";
-import TwirlImage from "../assets/projects/twirl.png";
-import LayoffEvadersImage from "../assets/projects/layoffevaders.png";
-import LiteNetImage from "../assets/projects/litenet.gif";
-import KaleidoscopeImage from "../assets/projects/kaleidoscope.png";
-import SensaiImage from "../assets/projects/sensai.png";
-import UptoneImage from "../assets/projects/uptone.png";
-import CredibilityImage from "../assets/projects/credibility.png";
-import BYRYouthImage from "../assets/projects/byryouth.png";
-import SACHSAppWebsiteImage from "../assets/projects/sachs-app-website.png";
-import SACHSWebsiteImage from "../assets/projects/sachs-website.png";
-import TicTacToeImage from "../assets/projects/tictactoe.png";
-import EnigmaImage from "../assets/projects/enigma.png";
-import COVID19TrackerImage from "../assets/projects/covid19-tracker.png";
-import EcoRewardsImage from "../assets/projects/ecorewards.png";
+import AlumnowImage from "../assets/projects/alumnow.png";
+import NvidiaTrackerImage from "../assets/projects/nvidia-tracker.png";
+import CamBotImage from "../assets/projects/cam-bot.png";
+import BertNLPImage from "../assets/projects/BERT-NLP.png";
 
 import { useState } from "react";
 import { Search } from "lucide-react";
@@ -27,59 +13,48 @@ import { Search } from "lucide-react";
 export default function Home() {
   const projects = [
     {
-      title: "Personal Website",
-      href: "https://github.com/cameronbyrne4/personal-2",
+      title: "AKPsi Alumni Network",
+      href: "https://github.com/cameronbyrne4/akpsi-alumni",
       description:
-        "A modern personal website built with Next.js and Tailwind CSS. Features dark mode, responsive design, and a clean portfolio layout.",
-      image: VibeDrawImage,
-      imageAlt: "Personal Website",
-      technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-      github: "https://github.com/cameronbyrne4/personal-2",
-      demo: "https://cameronbyrne4.github.io",
+        "A searchable alumni database and network for UCSB AKPsi, making it easy for students and grads to connect.",
+      image: AlumnowImage,
+      imageAlt: "AKPsi Alumni Network",
+      technologies: ["TypeScript", "Next.js", "MongoDB", "Tailwind CSS"],
+      github: "https://github.com/cameronbyrne4/akpsi-alumni",
+      demo: "https://github.com/cameronbyrne4/akpsi-alumni",
     },
     {
-      title: "Project 2",
-      href: "#",
+      title: "NVIDIA Tracker",
+      href: "https://github.com/cameronbyrne4/nvidia-tracker",
       description:
-        "Description of your second project. What did you build? What technologies did you use? What was the impact?",
-      image: SlideItInImage,
-      imageAlt: "Project 2",
-      technologies: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/cameronbyrne4/project-2",
-      demo: "#",
+        "A full-stack app that scrapes Reddit and analyzes sentiment to track how people are investing in Nvidia.",
+      image: NvidiaTrackerImage,
+      imageAlt: "NVIDIA Tracker",
+      technologies: ["React", "Vite", "Python", "Flask", "NLP"],
+      github: "https://github.com/cameronbyrne4/nvidia-tracker",
+      demo: "https://github.com/cameronbyrne4/nvidia-tracker",
     },
     {
-      title: "Project 3",
-      href: "#",
+      title: "Discord Mimic Bot",
+      href: "https://github.com/cameronbyrne4/discord-mimic-bot",
       description:
-        "Description of your third project. Focus on the problem you solved and the technologies you used.",
-      image: MakeItJakesImage,
-      imageAlt: "Project 3",
-      technologies: ["TypeScript", "Next.js", "PostgreSQL"],
-      github: "https://github.com/cameronbyrne4/project-3",
-      demo: "#",
+        "A Discord bot that mimics your texting style using iMessage data—10,000+ messages, 50+ users.",
+      image: CamBotImage,
+      imageAlt: "Discord Mimic Bot",
+      technologies: ["Python", "Discord.py", "NLP", "AI"],
+      github: "https://github.com/cameronbyrne4/discord-mimic-bot",
+      demo: "https://github.com/cameronbyrne4/discord-mimic-bot",
     },
     {
-      title: "Project 4",
-      href: "#",
+      title: "BERT Fine-Tuning for NER",
+      href: "https://github.com/cameronbyrne4/Bert-fine-tuning-NER",
       description:
-        "Description of your fourth project. Highlight any unique features or challenges you overcame.",
-      image: TwirlImage,
-      imageAlt: "Project 4",
-      technologies: ["Python", "FastAPI", "React"],
-      github: "https://github.com/cameronbyrne4/project-4",
-      demo: "#",
-    },
-    {
-      title: "Project 5",
-      href: "#",
-      description:
-        "Description of your fifth project. What makes this project special? What did you learn?",
-      image: LayoffEvadersImage,
-      imageAlt: "Project 5",
-      technologies: ["JavaScript", "Vue.js", "Firebase"],
-      github: "https://github.com/cameronbyrne4/project-5",
-      demo: "#",
+        "Fine-tuned a BERT model for Named Entity Recognition using PyTorch and Hugging Face Transformers (90%+ accuracy).",
+      image: BertNLPImage,
+      imageAlt: "BERT Fine-Tuning for NER",
+      technologies: ["Python", "PyTorch", "Transformers", "Jupyter Notebook"],
+      github: "https://github.com/cameronbyrne4/Bert-fine-tuning-NER",
+      demo: "https://github.com/cameronbyrne4/Bert-fine-tuning-NER",
     },
   ];
 

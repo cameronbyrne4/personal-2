@@ -3,11 +3,8 @@
 import Link from "./components/Link";
 import NextLink from "next/link";
 import Headshot from "@/app/assets/headshot.png";
-import ShopifyLogo from "@/app/components/icon/Shopify.png";
-import UWaterlooLogo from "@/app/components/icon/UWaterloo.png";
-import SunnybrookLogo from "@/app/components/icon/Sunnybrook.png";
-import JAMHacksLogo from "@/app/components/icon/JAMHacks.png";
-import StAugustineLogo from "@/app/components/icon/StAugustine.png";
+import UCSBLogo from "@/app/components/icon/UCSB.png";
+import MinecraftLogo from "@/app/components/icon/mclogo.png";
 import Image from "next/image";
 import { useState } from "react";
 import { GalleryHorizontalEnd } from "lucide-react";
@@ -19,13 +16,19 @@ export default function About() {
         <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
           <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
           <span className="text-stone-600 dark:text-stone-400">
-            Software Engineer passionate about building impactful products
+            Software Engineer learning how to build stuff that matters
           </span>
         </li>
         <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
           <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
           <span className="text-stone-600 dark:text-stone-400">
-            focused on full-stack development and modern web technologies
+            cs @ {" "}
+            <span className="inline-flex items-baseline gap-1">
+              <Image src={UCSBLogo} alt="UCSB Logo" width={20} height={20} className="object-contain" />
+              <Link href="https://www.ucsb.edu" className="font-medium">
+                UC Santa Barbara
+              </Link>
+            </span>
           </span>
         </li>
         <li className="group flex flex-col gap-3 pl-4 relative hover:translate-x-1 transition-transform duration-200">
@@ -35,36 +38,25 @@ export default function About() {
             <li className="relative flex items-start gap-4 group/item">
               <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
               <span className="text-stone-600 dark:text-stone-400">
-                building modern web applications with{" "}
-                <Link href="https://nextjs.org" className="font-medium">
-                  Next.js
-                </Link>{" "}
-                and{" "}
-                <Link href="https://react.dev" className="font-medium">
-                  React
-                </Link>
+                launched an alumni database <Link href="https://github.com/cameronbyrne4/akpsi-alumni" className="font-medium">network</Link> for college organizations <Link href="https://x.com/CamByrneTech/status/1939425628266369440" className="font-medium">(featured on X)</Link>
               </span>
             </li>
             <li className="relative flex items-start gap-4 group/item">
               <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
               <span className="text-stone-600 dark:text-stone-400">
-                exploring{" "}
-                <Link href="https://typescriptlang.org" className="font-medium">
-                  TypeScript
-                </Link>{" "}
-                and modern development practices
+                built a full-stack <Link href="https://github.com/cameronbyrne4/nvidia-tracker" className="font-medium">app</Link> for Reddit sentiment investing, analyzing 1,000+ posts
               </span>
             </li>
             <li className="relative flex items-start gap-4 group/item">
               <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
               <span className="text-stone-600 dark:text-stone-400">
-                contributing to open source and learning new technologies
+                shipped an AI Discord <Link href="https://github.com/cameronbyrne4/discord-mimic-bot" className="font-medium">bot</Link> that mimics your texting style, 10,000+ messages, 50+ users
               </span>
             </li>
             <li className="relative flex items-start gap-4 group/item">
               <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
               <span className="text-stone-600 dark:text-stone-400">
-                passionate about creating user-friendly and accessible applications
+                optimized a BERT <Link href="https://github.com/cameronbyrne4/Bert-fine-tuning-NER" className="font-medium">model</Link> for Named Entity Recognition, hitting 90% accuracy with PyTorch & Transformers
               </span>
             </li>
           </ul>
@@ -72,7 +64,7 @@ export default function About() {
         <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
           <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
           <span className="text-stone-600 dark:text-stone-400">
-            always learning and exploring new technologies to build better solutions
+            in high school: wanted to major in biology, only code written were scripts to automate <span className="inline-flex items-baseline gap-1"><Image src={MinecraftLogo} alt="Minecraft Logo" width={14} height={14} className="object-contain" /><Link href="https://www.minecraft.net/" className="font-medium">Minecraft</Link></span> farms
           </span>
         </li>
       </ul>
