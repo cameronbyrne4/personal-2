@@ -1,6 +1,3 @@
-<div align="center">
-    <img alt="Logo" src="docs/logo.png" width="100" />
-</div>
 <h1 align="center">
     Personal Website - Cameron Byrne
 </h1>
@@ -23,3 +20,5 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+shoutout [Martin Sit][https://x.com/_martinsit] for the fork ❤️
