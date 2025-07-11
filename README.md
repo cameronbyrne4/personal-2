@@ -2,7 +2,7 @@
     Personal Website - Cameron Byrne
 </h1>
 <p align="center">
-    Cameron Byrne's personal website. Built with <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>. Check it out at <a href="https://cameronbyrne4.github.io" target="_blank">cameronbyrne4.github.io</a>.
+    Cameron Byrne's personal website. Built with <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>. Check it out at <a href="https://cameronbyrne.xyz" target="_blank">cameronbyrne.xyz</a>, my first ever domain purchase.
 </p>
 
 ## Getting Started
