@@ -6,22 +6,73 @@ import AlumnowImage from "../assets/projects/alumnow.png";
 import NvidiaTrackerImage from "../assets/projects/nvidia-tracker.png";
 import CamBotImage from "../assets/projects/cam-bot.png";
 import BertNLPImage from "../assets/projects/BERT-NLP.png";
-
+import FoodHeroImage from "../assets/projects/foodhero.png";
+import PitchPerfectlyImage from "../assets/projects/PitchPerfect.png";
+import PensonaImage from "../assets/projects/pensona.png";
+import NousImage from "../assets/projects/nous-preview.png";
 import { useState } from "react";
 import { Search } from "lucide-react";
 
 export default function Home() {
   const projects = [
     {
+      title: "Nous",
+      href: "https://x.com/CamByrneTech/status/1953582736465441109",
+      description:
+        "Investigating the blockchain with a swarm of AI agents prompted with natural language queries.",
+      image: NousImage,
+      imageAlt: "Nous",
+      technologies: ["React", "Vite", "Supabase", "Typescript", "Tailwind", "Next.js", "v3.js", "Node.js", "Clerk", "Stripe", "LangChain"],
+      github: "https://github.com/cameronbyrne4/crypto-scribe",
+      demo: "https://x.com/CamByrneTech/status/1953582736465441109",
+    },
+    {
+      title: "Pensona",
+      href: "https://x.com/CamByrneTech/status/1943890156693647639",
+      description:
+        "A full-stack web app for transforming AI generated text into your own voice based on uploaded writing samples. Read my blog post to hear why this was a useless idea. Deployed at pensona.vercel.app",
+      image: PensonaImage,
+      imageAlt: "Pensona",
+      technologies: ["React", "Vite", "Supabase", "Typescript", "Tailwind CSS", "Gemini API"],
+      github: "https://github.com/cameronbyrne4/pitch-perfect-demo",
+      demo: "https://x.com/CamByrneTech/status/1943890156693647639",
+    },
+    {
+      title: "Pitch Perfectly",
+      href: "https://x.com/CamByrneTech/status/1940912180511346920",
+      description:
+        "A conversational AI agent that acts like a VC panelist for practicing pitch decks. Made a quick frontend with Lovable to show it's potential future. Made for ElevenLabs 2 hour hackathon.",
+      image: PitchPerfectlyImage,
+      imageAlt: "Pitch Perfectly",
+      technologies: ["ElevenLabs", "Conversational AI", "Prompt Engineering"],
+      github: "https://github.com/cameronbyrne4/pitch-perfect-demo",
+      demo: "https://x.com/CamByrneTech/status/1940912180511346920",
+    },
+    {
+      title: "Food Hero",
+      href: "https://foodhero.wixsite.com/portfolio",
+      description:
+        "A semester long UI/UX research study and prototyping project at National University of Singapore. DoorDash for surplus food as a budget-friendly option for busy adults. ",
+      image: FoodHeroImage,
+      imageAlt: "Food Hero",
+      technologies: ["Figma", "Teamwork", "UI/UX"],
+      demo: "https://foodhero.wixsite.com/portfolio",
+    },
+    {
+      // Add ui 1
+      // Add ui 2 XX
+      // add voice vc
+      // add pensona
+      // add nous
       title: "AKPsi Alumni Network",
       href: "https://github.com/cameronbyrne4/akpsi-alumni",
       description:
         "A searchable alumni database and network for UCSB AKPsi, making it easy for students and grads to connect.",
       image: AlumnowImage,
       imageAlt: "AKPsi Alumni Network",
-      technologies: ["TypeScript", "Next.js", "MongoDB", "Tailwind CSS"],
+      technologies: ["TypeScript", "Next.js", "Supabase", "Tailwind CSS"],
       github: "https://github.com/cameronbyrne4/akpsi-alumni",
-      demo: "https://github.com/cameronbyrne4/akpsi-alumni",
+      demo: "https://x.com/CamByrneTech/status/1939425628266369440",
     },
     {
       title: "NVIDIA Tracker",
@@ -32,7 +83,7 @@ export default function Home() {
       imageAlt: "NVIDIA Tracker",
       technologies: ["React", "Vite", "Python", "Flask", "NLP"],
       github: "https://github.com/cameronbyrne4/nvidia-tracker",
-      demo: "https://github.com/cameronbyrne4/nvidia-tracker",
+      demo: "https://drive.google.com/file/d/14z2P6uDExbSUYHqLf-Jva2rg_Tg6VvVU/view?usp=sharing",
     },
     {
       title: "Discord Mimic Bot",
@@ -41,7 +92,7 @@ export default function Home() {
         "A Discord bot that mimics your texting style using iMessage data—10,000+ messages, 50+ users.",
       image: CamBotImage,
       imageAlt: "Discord Mimic Bot",
-      technologies: ["Python", "Discord.py", "NLP", "AI"],
+      technologies: ["Python", "Discord.py", "MongoDB", "NLP", "AI"],
       github: "https://github.com/cameronbyrne4/discord-mimic-bot",
       demo: "https://github.com/cameronbyrne4/discord-mimic-bot",
     },

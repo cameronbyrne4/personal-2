@@ -38,7 +38,7 @@ export default function About() {
             <li className="relative flex items-start gap-4 group/item">
               <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
               <span className="text-stone-600 dark:text-stone-400">
-                launched an alumni database <Link href="https://github.com/cameronbyrne4/akpsi-alumni" className="font-medium">network</Link> for college organizations <Link href="https://x.com/CamByrneTech/status/1939425628266369440" className="font-medium">(featured on X)</Link>
+                launched an alumni database <Link href="https://github.com/cameronbyrne4/akpsi-alumni" className="font-medium">network</Link> for college organizations <Link href="https://x.com/CamByrneTech/status/1939425628266369440" className="font-medium">(featured on X)</Link>, scaling part-time under $10k+ grant
               </span>
             </li>
             <li className="relative flex items-start gap-4 group/item">
